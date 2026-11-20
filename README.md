@@ -16,6 +16,7 @@
 |---|---|
 | [`SKILL.md`](skills/olah-style-paper-posts/SKILL.md) | Agent 使用说明、七阶段工作流和验收门槛 |
 | [`references/`](skills/olah-style-paper-posts/references/) | 叙事、论文拆解、引用、CSS、SVG、交互、浏览器 QA 和质量评分 |
+| [`math-typesetting.md`](skills/olah-style-paper-posts/references/math-typesetting.md) | 数学公式：离线 MathML、分式/求和/脚本、移动端滚动及静态与浏览器验证 |
 | [`assets/`](skills/olah-style-paper-posts/assets/) | HTML 模板、CSS 设计系统、JavaScript 增强与 SVG 图元 |
 | [`scripts/`](skills/olah-style-paper-posts/scripts/) | 新建文章、静态校验、浏览器 QA、带计算样式的 SVG 提取 |
 | [`examples/resnet/`](examples/resnet/index.html) | ResNet：11 章，10 幅独立 SVG，残差/梯度/投影/实验对照 |
@@ -108,6 +109,7 @@ python -m pytest -q
 - 正文仅呈现与研究主题相关的内容。不要把“原创图解”“单文件离线 HTML”“参考某某风格”“浏览器打印适配”之类生产元信息写在文章首尾。
 - 图示独立绘制，不复制 Colah 或 Annotated Transformer 的原图、原文、原代码；尊重第三方素材的许可。
 - 文章自身应能离线阅读；默认不加载 CDN、外部字体、遥测服务或客户端依赖。
+- 关键数学公式采用真实的数学结构（默认浏览器原生 MathML），不要用 Unicode 字符串拼凑复杂公式；必须检查 SVG 数学标签边界、无障碍语义、手机宽度和离线环境。
 - 任何实验图表附来源定位，推导值必须标注为计算结果，教学示例不能伪装为论文复现。
 - README、Skill 文档和 QA 报告可以记录制作过程；文章正文不应记录。
 
